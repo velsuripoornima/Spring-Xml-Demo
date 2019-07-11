@@ -9,6 +9,7 @@ public class Main {
 
         public static void main(String[] args) {
             ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+
             Movie movie = context.getBean("rammovie", Movie.class);
             movie.displayinfo();
 
@@ -28,6 +29,9 @@ public class Main {
 
             System.out.println(movie==movie1);
             System.out.println(ravimovie==ravimovie1);
+
+            ((ClassPathXmlApplicationContext)context).close();
+
 
         }
 }
