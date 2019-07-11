@@ -2,15 +2,8 @@ package main.java.com.stackroute;
 
 
 import main.java.com.stackroute.domain.Movie;
-import org.springframework.beans.factory.support.BeanDefinitionReader;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.GenericApplicationContext;
-import org.springframework.core.io.ClassPathResource;
 
 public class main {
 
@@ -19,16 +12,22 @@ public class main {
             Movie movie = context.getBean("rammovie", Movie.class);
             movie.displayinfo();
 
-            XmlBeanFactory factory = new XmlBeanFactory (new ClassPathResource("beans.xml"));
-            Movie obj = factory.getBean("rammovie",Movie.class);
-            obj.displayinfo();
+            Movie movie1 = context.getBean("rammovie1", Movie.class);
+            movie1.displayinfo();
 
-            DefaultListableBeanFactory factory1=new DefaultListableBeanFactory();
-            BeanDefinitionRegistry context1=new GenericApplicationContext(factory1);
-            BeanDefinitionReader reader=new XmlBeanDefinitionReader(context1);
-            reader.loadBeanDefinitions("beans.xml");
-            Movie shivam=factory1.getBean("rammovie",Movie.class);
-            shivam.displayinfo();
+
+            Movie ravimovie = context.getBean("ravimovie", Movie.class);
+            ravimovie.displayinfo();
+
+            Movie ravimovie1 = context.getBean("ravimovie1", Movie.class);
+            ravimovie1.displayinfo();
+
+
+            Movie vijaymovie = context.getBean("vijaymovie", Movie.class);
+            vijaymovie.displayinfo();
+
+            System.out.println(movie==movie1);
+            System.out.println(ravimovie==ravimovie1);
 
         }
 }

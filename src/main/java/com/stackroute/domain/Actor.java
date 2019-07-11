@@ -5,11 +5,11 @@ public class Actor {
     private String name,gendor;
     private int age;
 
-//    public Actor(String name, String gendor, int age) {
-//        this.name = name;
-//        this.gendor = gendor;
-//        this.age = age;
-//    }
+    public Actor(String name, String gendor, int age) {
+        this.name = name;
+        this.gendor = gendor;
+        this.age = age;
+    }
 
 
     public void setName(String name) {
@@ -31,7 +31,7 @@ public class Actor {
 
     public void info(){
 
-        System.out.println("Actor name is:"+name+ "\ngender of the actor is :" +gendor+ "\nage is :" +age);
+        System.out.println("Actor name is:"+name+ "\ngender of the actor is :" +gendor+ "\nage is :" +age +"\n");
     }
 
 }
