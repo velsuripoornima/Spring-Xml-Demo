@@ -43,7 +43,11 @@
 
         </bean>
 
-        <bean id="bean" class="main.java.com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+        <bean id="beanlyfecycle" class="main.java.com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+
+        </bean>
+
+        <bean id="beanposrprocessor" class="main.java.com.stackroute.demo.BeanPostProcessorDemoBean">
 
         </bean>
 
