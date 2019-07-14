@@ -1,4 +1,4 @@
-package main.java.com.stackroute.demo;
+package com.stackroute.demo;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
