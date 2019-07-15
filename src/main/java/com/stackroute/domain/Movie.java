@@ -1,4 +1,4 @@
-package main.java.com.stackroute.domain;
+package com.stackroute.domain;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
@@ -17,6 +17,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
 
     }
     public Movie(Actor actor) {
+
         this.actor = actor;
     }
 
