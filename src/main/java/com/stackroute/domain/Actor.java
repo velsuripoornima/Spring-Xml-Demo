@@ -1,13 +1,13 @@
-package main.java.com.stackroute.domain;
+package com.stackroute.domain;
 
 public class Actor {
 
-    private String name,gendor;
+    private String name,gender;
     private int age;
 
-    public Actor(String name, String gendor, int age) {
+    public Actor(String name, String gender, int age) {
         this.name = name;
-        this.gendor = gendor;
+        this.gender = gender;
         this.age = age;
     }
 
@@ -18,9 +18,9 @@ public class Actor {
     }
 
 
-    public void setGendor(String gendor) {
+    public void setGender(String gender) {
 
-        this.gendor = gendor;
+        this.gender = gender;
     }
 
 
@@ -31,7 +31,7 @@ public class Actor {
 
     public void info(){
 
-        System.out.println("Actor name is:"+name+ "\ngender of the actor is :" +gendor+ "\nage is :" +age +"\n");
+        System.out.println("Actor name is:"+name+ "\ngender of the actor is :" +gender+ "\nage is :" +age +"\n");
     }
 
 }
