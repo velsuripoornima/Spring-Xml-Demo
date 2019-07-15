@@ -1,4 +1,4 @@
-package main.java.com.stackroute.domain;
+package com.stackroute.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
