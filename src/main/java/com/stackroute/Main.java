@@ -1,7 +1,8 @@
-package main.java.com.stackroute;
+package com.stackroute;
 
 
-import main.java.com.stackroute.domain.Movie;
+import com.stackroute.domain.Movie;
+import com.stackroute.domain.Movie;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
