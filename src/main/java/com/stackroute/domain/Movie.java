@@ -1,4 +1,4 @@
-package main.java.com.stackroute.domain;
+package com.stackroute.domain;
 
 public class Movie {
 

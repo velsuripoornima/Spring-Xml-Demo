@@ -1,7 +1,8 @@
-package main.java.com.stackroute;
+package com.stackroute;
 
 
-import main.java.com.stackroute.domain.Movie;
+import com.stackroute.domain.Movie;
+import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.support.BeanDefinitionReader;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -12,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
-public class main {
+public class Main {
 
         public static void main(String[] args) {
             ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
