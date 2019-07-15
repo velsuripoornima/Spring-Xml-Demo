@@ -10,7 +10,7 @@
 
         <context:annotation-config />
 
-        <bean id="actor" class="com.stackroute.domain.Actor">
+        <bean id="ram" class="com.stackroute.domain.Actor">
                 <constructor-arg name="name" value="ram" index="0" type="java.lang.String"/>
                 <constructor-arg name="age" value="25" index="2" type="int"/>
                 <constructor-arg name="gender" value="male" index="1" type="java.lang.String"/>
@@ -28,25 +28,9 @@
                 <constructor-arg name="gender" value="male" index="1" type="java.lang.String"/>
         </bean>
 
-        <bean name="rammovie,rammovie1" class="com.stackroute.domain.Movie" scope="prototype" autowire="byName">
-
+        <bean name="rammovie,rammovie1" class="com.stackroute.domain.Movie" scope="prototype">
+                <constructor-arg name="actor" ref="ram" />
         </bean>
-
-<!--        <bean name="ravimovie,ravimovie1" class="Main.java.com.stackroute.domain.Movie" autowire="byType">-->
-
-<!--&lt;!&ndash;                <constructor-arg name="actor" ref="ravi"/>&ndash;&gt;-->
-
-<!--        </bean>-->
-        <!--error:
-                WARNING: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ravimovie' defined in class path resource [beans.xml]:
-                 Unsatisfied dependency expressed through bean property 'actor';
-                nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException:
-                No qualifying bean of type 'Main.java.com.stackroute.domain.Actor'
-                available: expected single matching bean but found 3: actor,ravi,vijay
-                Exception in thread "main" org.springframework.beans.factory.UnsatisfiedDependencyException:
-                Error creating bean with name 'ravimovie' defined in class path resource [beans.xml]:
-                Unsatisfied dependency expressed through bean property 'actor'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException:
-                No qualifying bean of type 'Main.java.com.stackroute.domain.Actor' available: expected single matching bean but found 3: actor,ravi,vijay-->
 
         <bean name="ravimovie,ravimovie1" class="com.stackroute.domain.Movie">
                 <constructor-arg name="actor" ref="ravi" />
