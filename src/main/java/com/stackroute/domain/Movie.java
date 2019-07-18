@@ -7,9 +7,12 @@ public class Movie {
 
     private Actor actor;
 
+    //it is a default contructor for movie class
     public Movie() {
 
     }
+
+    //create constructor for actor class
     public Movie(Actor actor) {
         this.actor = actor;
     }
@@ -20,6 +23,7 @@ public class Movie {
         this.actor = actor;
     }
 
+    //by using this method we displaying the actor information
     public void displayinfo(){
 
         actor.info();
