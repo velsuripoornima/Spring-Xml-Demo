@@ -10,28 +10,33 @@
 
         <context:annotation-config />
 
+        <!-- creating bean for actor class with id as ram-->
         <bean id="ram" class="com.stackroute.domain.Actor">
                 <constructor-arg name="name" value="ram" index="0" type="java.lang.String"/>
                 <constructor-arg name="age" value="25" index="2" type="int"/>
                 <constructor-arg name="gender" value="male" index="1" type="java.lang.String"/>
         </bean>
 
+        <!-- creating bean for actor class with id as ravi-->
         <bean id="ravi" class="com.stackroute.domain.Actor">
                 <constructor-arg name="name" value="ravi" index="0" type="java.lang.String"/>
                 <constructor-arg name="age" value="25" index="2" type="int"/>
                 <constructor-arg name="gender" value="male" index="1" type="java.lang.String"/>
         </bean>
 
+        <!-- creating bean for actor class with id as vijay-->
         <bean id="vijay" class="com.stackroute.domain.Actor">
                 <constructor-arg name="name" value="vijay" index="0" type="java.lang.String"/>
                 <constructor-arg name="age" value="25" index="2" type="int"/>
                 <constructor-arg name="gender" value="male" index="1" type="java.lang.String"/>
         </bean>
 
+        <!-- creating bean for movie class  with constructor class-->
         <bean name="rammovie,rammovie1" class="com.stackroute.domain.Movie" scope="prototype">
                 <constructor-arg name="actor" ref="ram" />
         </bean>
 
+        <!-- creating bean for movie-->
         <bean name="ravimovie,ravimovie1" class="com.stackroute.domain.Movie">
                 <constructor-arg name="actor" ref="ravi" />
         </bean>

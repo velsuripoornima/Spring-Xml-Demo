@@ -7,19 +7,22 @@ public class Movie {
 
     private Actor actor;
 
+    //created default constructor
     public Movie() {
 
     }
+
+    //creating the constructor for actor class
     public Movie(Actor actor) {
         this.actor = actor;
     }
 
-//    @Autowired
-//    @Qualifier("ravi")
+
     public void setActor(Actor actor) {
         this.actor = actor;
     }
 
+    //by using this method we are calling the actor class method
     public void displayinfo(){
 
         actor.info();
