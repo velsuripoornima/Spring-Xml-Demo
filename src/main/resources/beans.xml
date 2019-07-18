@@ -9,29 +9,34 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
         <context:annotation-config />
-
+       
+       <!-- creaing bean for actor class -->
         <bean id="actor" class="com.stackroute.domain.Actor">
                 <constructor-arg name="name" value="ram" index="0" type="java.lang.String"/>
                 <constructor-arg name="age" value="25" index="2" type="int"/>
                 <constructor-arg name="gender" value="male" index="1" type="java.lang.String"/>
         </bean>
 
+        <!-- creaing bean for actor class -->
         <bean id="ravi" class="com.stackroute.domain.Actor">
                 <constructor-arg name="name" value="ravi" index="0" type="java.lang.String"/>
                 <constructor-arg name="age" value="25" index="2" type="int"/>
                 <constructor-arg name="gender" value="male" index="1" type="java.lang.String"/>
         </bean>
 
+        <!-- creaing bean for actor class -->
         <bean id="vijay" class="com.stackroute.domain.Actor">
                 <constructor-arg name="name" value="vijay" index="0" type="java.lang.String"/>
                 <constructor-arg name="age" value="25" index="2" type="int"/>
                 <constructor-arg name="gender" value="male" index="1" type="java.lang.String"/>
         </bean>
 
+        <!-- creaing bean for movie class -->
         <bean name="rammovie,rammovie1" class="com.stackroute.domain.Movie">
                 <constructor-arg name="actor" ref="actor" />
         </bean>
-
+       
+        <!-- creaing bean for movie class -->
         <bean name="ravimovie,ravimovie1" class="com.stackroute.domain.Movie">
                 <constructor-arg name="actor" ref="ravi" />
         </bean>
