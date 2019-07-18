@@ -13,9 +13,12 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
 
     private Actor actor;
 
+    //default constructor
     public Movie() {
 
     }
+    
+    //constructor for actor class
     public Movie(Actor actor) {
         this.actor = actor;
     }
@@ -26,24 +29,27 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
         this.actor = actor;
     }
 
+    //calling actor method
     public void displayinfo(){
 
         actor.info();
     }
 
-
+    //inbuilt method for appliationaware
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
 
         System.out.println("this method implemented by BeanFactoryAware.....");
 
     }
 
+    //inbuilt method for BeanFactoryAware
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 
         System.out.println("this method implemented by Application context aware ...");
 
     }
 
+    //inbuilt method for Beannameaware
     public void setBeanName(String s) {
 
         System.out.println("this is implemented by beanawarenme....");
