@@ -9,6 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
 
         public static void main(String[] args) {
+                //using ApplicationContext retreiving the data
             ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
 
             Movie movie = context.getBean("rammovie", Movie.class);
@@ -28,10 +29,10 @@ public class Main {
             Movie vijaymovie = context.getBean("vijaymovie", Movie.class);
             vijaymovie.displayinfo();
 
-            System.out.println(movie==movie1);
-            System.out.println(ravimovie==ravimovie1);
+            System.out.println(movie==movie1); // resulting as false because scope as prototype
+            System.out.println(ravimovie==ravimovie1); // resulting true for scope is singletone
 
-            ((ClassPathXmlApplicationContext)context).close();
+            ((ClassPathXmlApplicationContext)context).close(); //closing the context
 
 
         }
