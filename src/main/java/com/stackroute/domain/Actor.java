@@ -5,6 +5,7 @@ public class Actor {
     private String name,gender;
     private int age;
 
+    //creating parameter constructor
     public Actor(String name, String gender, int age) {
         this.name = name;
         this.gender = gender;
@@ -12,6 +13,7 @@ public class Actor {
     }
 
 
+    //creating the getters and setters
     public void setName(String name) {
 
         this.name = name;
